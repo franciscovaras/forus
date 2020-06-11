@@ -22,7 +22,7 @@ export class ClientesComponent implements OnInit {
   delete(cliente: Cliente): void {
     swal({
       title: 'Está seguro?',
-      text: `¿Seguro que desea eliminar al cliente ${cliente.productoNombre} ${cliente.productoDescripcion}?`,
+      text: `¿Seguro que desea eliminar al producto ${cliente.productoNombre} ${cliente.productoDescripcion}?`,
       type: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
@@ -40,8 +40,8 @@ export class ClientesComponent implements OnInit {
           response => {
             this.clientes = this.clientes.filter(cli => cli !== cliente)
             swal(
-              'Cliente Eliminado!',
-              `Cliente ${cliente.productoNombre} eliminado con éxito.`,
+              'Producto Eliminado!',
+              `Producto ${cliente.productoNombre} eliminado con éxito.`,
               'success'
             )
           }
